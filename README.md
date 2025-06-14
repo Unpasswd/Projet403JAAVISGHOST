@@ -291,6 +291,4 @@ Enter the options and continue.
 ##### Your Favourite Tool is not in hackingtool or Suggestions Please [CLICK HERE](https://forms.gle/b235JoCKyUq5iM3t8)
 ![Z4nzu's github stats](https://github-readme-stats.vercel.app/api?username=Z4nzu&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)
 
-#### Don't Forgot to share with Your Friends 
-### The new Update get will soon stay updated
-#### Thank you..!!
+#############JAVIS - J'ai construit ces applications dans le cadre du PROJET403--- 
