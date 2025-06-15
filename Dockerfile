@@ -1,12 +1,9 @@
-FROM kalilinux/kali-rolling:latest
-RUN apt-get update && \
-    apt-get install -y git python3-pip figlet sudo && \
-    apt-get install -y boxes php curl xdotool wget
-
-WORKDIR /root/hackingtool
-COPY requirements.txt ./
-RUN pip3 install --no-cache-dir boxes flask lolcat requests -r requirements.txt
+FROM amd64/python:3.8.2
+MAINTAINER SanJin<lauixData@gmail.com>
+WORKDIR /w5
+COPY requirements.txt requirements.txt
+RUN pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple  \
+    && pip install --no-cache-dir -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+COPY ./docker/supervisord.conf /etc/supervisord.conf
 COPY . .
-RUN true && echo "/root/hackingtool/" > /home/hackingtoolpath.txt;
-EXPOSE 1-65535
-ENTRYPOINT ["python3", "/root/hackingtool/hackingtool.py"]
+CMD ["supervisord", "-c", "/etc/supervisord.conf"]
